@@ -1,7 +1,7 @@
 # win sys messages values
 
 ## windows system messages WM_xxx
-   most part of the mith comments
+   most part of them with comments
 
 ## other windows system messages
  * BM_ CBEM_ CDM_ EM_ IE_ LVM_ RB_ SB_ TB_ UDM_ TTM_
