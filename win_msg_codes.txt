@@ -1,0 +1,1008 @@
+WM_ACTIVATE    0x6   The WM_ACTIVATE message is sent when a window is being activated or deactivated. This message is sent first to the window procedure of the top-level window being deactivated; it is then sent to the window procedure of the top-level window being activated.
+WM_ACTIVATEAPP    0x1C  The WM_ACTIVATEAPP message is sent when a window belonging to a different application than the active window is about to be activated. The message is sent to the application whose window is being activated and to the application whose window is being deactivated.
+WM_AFXFIRST    0x360    The WM_AFXFIRST specifies the first afx message.
+WM_AFXLAST  0x37F    The WM_AFXFIRST specifies the last afx message.
+WM_APP   0x8000   The WM_APP constant is used by applications to help define private messages, usually of the form WM_APP+X, where X is an integer value.
+WM_APPCOMMAND     0x0319  The WM_APPCOMMAND message notifies a window that the user generated an application command event, for example, by clicking an application command button using the mouse or typing an application command key on the keyboard.
+WM_ASKCBFORMATNAME   0x30C    The WM_ASKCBFORMATNAME message is sent to the clipboard owner by a clipboard viewer window to request the name of a CF_OWNERDISPLAY clipboard format.
+WM_CANCELJOURNAL  0x4B  The WM_CANCELJOURNAL message is posted to an application when a user cancels the application's journaling activities. The message is posted with a NULL window handle.
+WM_CANCELMODE     0x001f
+WM_CANCELMODE  0x1F  The WM_CANCELMODE message is sent to cancel certain modes, such as mouse capture. For example, the system sends this message to the active window when a dialog box or message box is displayed. Certain functions also send this message explicitly to the specified window regardless of whether it is the active window. For example, the EnableWindow function sends this message when disabling the specified window.
+WM_CAP_DRIVER_GET_NAMEW     0x0470
+WM_CAP_DRIVER_GET_VERSIONW     0x0471
+WM_CAP_FILE_GET_CAPTURE_FILEW     0x0479
+WM_CAP_FILE_SAVEASW     0x047b
+WM_CAP_FILE_SAVEDIBW     0x047d
+WM_CAP_FILE_SET_CAPTURE_FILEW     0x0478
+WM_CAP_GET_MCI_DEVICEW     0x04a7
+WM_CAP_PAL_OPENW     0x04b4
+WM_CAP_PAL_SAVEW     0x04b5
+WM_CAP_SET_CALLBACK_ERRORW     0x0466
+WM_CAP_SET_CALLBACK_STATUSW     0x0467
+WM_CAP_SET_MCI_DEVICEW     0x04a6
+WM_CAP_UNICODE_START     0x0464
+WM_CAPTURECHANGED    0x215    The WM_CAPTURECHANGED message is sent to the window that is losing the mouse capture.
+WM_CHANGECBCHAIN  0x30D    The WM_CHANGECBCHAIN message is sent to the first window in the clipboard viewer chain when a window is being removed from the chain.
+WM_CHANGEUISTATE  0x127    An application sends the WM_CHANGEUISTATE message to indicate that the user interface (UI) state should be changed.
+WM_CHAR  0x102    The WM_CHAR message is posted to the window with the keyboard focus when a WM_KEYDOWN message is translated by the TranslateMessage function. The WM_CHAR message contains the character code of the key that was pressed.
+WM_CHARTOITEM  0x2F  Sent by a list box with the LBS_WANTKEYBOARDINPUT style to its owner in response to a WM_CHAR message.
+WM_CHILDACTIVATE  0x22  The WM_CHILDACTIVATE message is sent to a child window when the user clicks the window's title bar or when the window is activated, moved, or sized.
+WM_CHOOSEFONT_GETLOGFONT     0x0401
+WM_CHOOSEFONT_SETFLAGS     0x0466
+WM_CHOOSEFONT_SETLOGFONT     0x0465
+WM_CLEAR    0x303    An application sends a WM_CLEAR message to an edit control or combo box to delete (clear) the current selection, if any, from the edit control.
+WM_CLOSE    0x10  The WM_CLOSE message is sent as a signal that a window or an application should terminate.
+WM_COMMAND  0x111    The WM_COMMAND message is sent when the user selects a command item from a menu, when a control sends a notification message to its parent window, or when an accelerator keystroke is translated.
+WM_COMMNOTIFY     0x0044
+WM_COMPACTING  0x41  The WM_COMPACTING message is sent to all top-level windows when the system detects more than 12.5 percent of system time over a 30- to 60-second interval is being spent compacting memory. This indicates that system memory is low.
+WM_COMPAREITEM    0x39  The system sends the WM_COMPAREITEM message to determine the relative position of a new item in the sorted list of an owner-drawn combo box or list box. Whenever the application adds a new item, the system sends this message to the owner of a combo box or list box created with the CBS_SORT or LBS_SORT style.
+WM_CONTEXTMENU    0x7B  The WM_CONTEXTMENU message notifies a window that the user clicked the right mouse button (right-clicked) in the window.
+WM_CONVERTREQUEST     0x010a
+WM_CONVERTRESULT     0x010b
+WM_COPY  0x301    An application sends the WM_COPY message to an edit control or combo box to copy the current selection to the clipboard in CF_TEXT format.
+WM_COPYDATA    0x4A  An application sends the WM_COPYDATA message to pass data to another application.
+WM_COPYGLOBALDATA     0x0049
+WM_CPL_LAUNCH     0x07e8  An application sends the WM_CPL_LAUNCH message to Windows Control Panel to request that a Control Panel application be started.
+WM_CPL_LAUNCHED     0x07e9 The WM_CPL_LAUNCHED message is sent when a Control Panel application, started by the WM_CPL_LAUNCH message, has closed. The WM_CPL_LAUNCHED message is sent to the window identified by the wParam parameter of the WM_CPL_LAUNCH message that started the application.
+WM_CREATE   0x1   The WM_CREATE message is sent when an application requests that a window be created by calling the CreateWindowEx or CreateWindow function. (The message is sent before the function returns.) The window procedure of the new window receives this message after the window is created, but before the window becomes visible.
+WM_CTLCOLOR     0x0019  The WM_CTLCOLORBTN message is sent to the parent window of a button before drawing the button. The parent window can change the button's text and background colors. However only owner-drawn buttons respond to the parent window processing this message.
+WM_CTLCOLORBTN    0x135    The WM_CTLCOLORBTN message is sent to the parent window of a button before drawing the button. The parent window can change the button's text and background colors. However, only owner-drawn buttons respond to the parent window processing this message.
+WM_CTLCOLORDLG    0x136    The WM_CTLCOLORDLG message is sent to a dialog box before the system draws the dialog box. By responding to this message, the dialog box can set its text and background colors using the specified display device context handle.
+WM_CTLCOLOREDIT   0x133    An edit control that is not read-only or disabled sends the WM_CTLCOLOREDIT message to its parent window when the control is about to be drawn. By responding to this message, the parent window can use the specified device context handle to set the text and background colors of the edit control.
+WM_CTLCOLORLISTBOX   0x134    Sent to the parent window of a list box before the system draws the list box. By responding to this message, the parent window can set the text and background colors of the list box by using the specified display device context handle.
+WM_CTLCOLORMSGBOX    0x132    The WM_CTLCOLORMSGBOX message is sent to the owner window of a message box before Windows draws the message box. By responding to this message, the owner window can set the text and background colors of the message box by using the given display device context handle.
+WM_CTLCOLORSCROLLBAR    0x137    The WM_CTLCOLORSCROLLBAR message is sent to the parent window of a scroll bar control when the control is about to be drawn. By responding to this message, the parent window can use the display context handle to set the background color of the scroll bar control.
+WM_CTLCOLORSTATIC    0x138    A static control, or an edit control that is read-only or disabled, sends the WM_CTLCOLORSTATIC message to its parent window when the control is about to be drawn. By responding to this message, the parent window can use the specified device context handle to set the text and background colors of the static control.
+WM_CTLINIT     0x0387
+WM_CUT   0x300    An application sends a WM_CUT message to an edit control or combo box to delete (cut) the current selection, if any, in the edit control and copy the deleted text to the clipboard in CF_TEXT format.
+WM_DEADCHAR    0x103    The WM_DEADCHAR message is posted to the window with the keyboard focus when a WM_KEYUP message is translated by the TranslateMessage function. WM_DEADCHAR specifies a character code generated by a dead key. A dead key is a key that generates a character, such as the umlaut (double-dot), that is combined with another character to form a composite character. For example, the umlaut-O character (Ö) is generated by typing the dead key for the umlaut character, and then typing the O key.
+WM_DELETEITEM  0x2D  Sent to the owner of a list box or combo box when the list box or combo box is destroyed or when items are removed by the LB_DELETESTRING, LB_RESETCONTENT, CB_DELETESTRING, or CB_RESETCONTENT message. The system sends a WM_DELETEITEM message for each deleted item. The system sends the WM_DELETEITEM message for any deleted list box or combo box item with nonzero item data.
+WM_DESTROY  0x2   The WM_DESTROY message is sent when a window is being destroyed. It is sent to the window procedure of the window being destroyed after the window is removed from the screen. This message is sent first to the window being destroyed and then to the child windows (if any) as they are destroyed. During the processing of the message, it can be assumed that all child windows still exist.
+WM_DESTROYCLIPBOARD  0x307    The WM_DESTROYCLIPBOARD message is sent to the clipboard owner when a call to the EmptyClipboard function empties the clipboard.
+WM_DEVICECHANGE   0x219    Notifies an application of a change to the hardware configuration of a device or the computer.
+WM_DEVMODECHANGE  0x1B  The WM_DEVMODECHANGE message is sent to all top-level windows whenever the user changes device-mode settings.
+WM_DISPLAYCHANGE  0x7E  The WM_DISPLAYCHANGE message is sent to all windows when the display resolution has changed.
+WM_DRAWCLIPBOARD  0x308    The WM_DRAWCLIPBOARD message is sent to the first window in the clipboard viewer chain when the content of the clipboard changes. This enables a clipboard viewer window to display the new content of the clipboard.
+WM_DRAWITEM    0x2B  The WM_DRAWITEM message is sent to the parent window of an owner-drawn button, combo box, list box, or menu when a visual aspect of the button, combo box, list box, or menu has changed.
+WM_DROPFILES   0x233    Sent when the user drops a file on the window of an application that has registered itself as a recipient of dropped files.
+WM_ENABLE   0xA   The WM_ENABLE message is sent when an application changes the enabled state of a window. It is sent to the window whose enabled state is changing. This message is sent before the EnableWindow function returns, but after the enabled state (WS_DISABLED style bit) of the window has changed.
+WM_ENDSESSION  0x16  The WM_ENDSESSION message is sent to an application after the system processes the results of the WM_QUERYENDSESSION message. The WM_ENDSESSION message informs the application whether the session is ending.
+WM_ENTERIDLE   0x121    The WM_ENTERIDLE message is sent to the owner window of a modal dialog box or menu that is entering an idle state. A modal dialog box or menu enters an idle state when no messages are waiting in its queue after it has processed one or more previous messages.
+WM_ENTERMENULOOP  0x211    The WM_ENTERMENULOOP message informs an application's main window procedure that a menu modal loop has been entered.
+WM_ENTERSIZEMOVE  0x231    The WM_ENTERSIZEMOVE message is sent one time to a window after it enters the moving or sizing modal loop. The window enters the moving or sizing modal loop when the user clicks the window's title bar or sizing border, or when the window passes the WM_SYSCOMMAND message to the DefWindowProc function and the wParam parameter of the message specifies the SC_MOVE or SC_SIZE value. The operation is complete when DefWindowProc returns.
+WM_ERASEBKGND  0x14  The WM_ERASEBKGND message is sent when the window background must be erased (for example, when a window is resized). The message is sent to prepare an invalidated portion of a window for painting.
+WM_EXITMENULOOP   0x212    The WM_EXITMENULOOP message informs an application's main window procedure that a menu modal loop has been exited.
+WM_EXITSIZEMOVE   0x232    The WM_EXITSIZEMOVE message is sent one time to a window, after it has exited the moving or sizing modal loop. The window enters the moving or sizing modal loop when the user clicks the window's title bar or sizing border, or when the window passes the WM_SYSCOMMAND message to the DefWindowProc function and the wParam parameter of the message specifies the SC_MOVE or SC_SIZE value. The operation is complete when DefWindowProc returns.
+WM_FONTCHANGE  0x1D  An application sends the WM_FONTCHANGE message to all top-level windows in the system after changing the pool of font resources.
+WM_GETDLGCODE  0x87  The WM_GETDLGCODE message is sent to the window procedure associated with a control. By default, the system handles all keyboard input to the control; the system interprets certain types of keyboard input as dialog box navigation keys. To override this default behavior, the control can respond to the WM_GETDLGCODE message to indicate the types of input it wants to process itself.
+WM_GETFONT  0x31  An application sends a WM_GETFONT message to a control to retrieve the font with which the control is currently drawing its text.
+WM_GETHOTKEY   0x33  An application sends a WM_GETHOTKEY message to determine the hot key associated with a window.
+WM_GETICON  0x7F  The WM_GETICON message is sent to a window to retrieve a handle to the large or small icon associated with a window. The system displays the large icon in the ALT+TAB dialog, and the small icon in the window caption.
+WM_GETMINMAXINFO  0x24  The WM_GETMINMAXINFO message is sent to a window when the size or position of the window is about to change. An application can use this message to override the window's default maximized size and position, or its default minimum or maximum tracking size.
+WM_GETOBJECT   0x3D  Active Accessibility sends the WM_GETOBJECT message to obtain information about an accessible object contained in a server application. Applications never send this message directly. It is sent only by Active Accessibility in response to calls to AccessibleObjectFromPoint, AccessibleObjectFromEvent, or AccessibleObjectFromWindow. However, server applications handle this message.
+WM_GETTEXT  0xD   An application sends a WM_GETTEXT message to copy the text that corresponds to a window into a buffer provided by the caller.
+WM_GETTEXTLENGTH  0xE   An application sends a WM_GETTEXTLENGTH message to determine the length, in characters, of the text associated with a window.
+WM_GLOBALRCCHANGE     0x0383
+WM_HANDHELDFIRST  0x358
+WM_HANDHELDLAST   0x35F
+WM_HEDITCTL     0x0385
+WM_HELP  0x53  Indicates that the user pressed the F1 key. If a menu is active when F1 is pressed, WM_HELP is sent to the window associated with the menu; otherwise, WM_HELP is sent to the window that has the keyboard focus. If no window has the keyboard focus, WM_HELP is sent to the currently active window.
+WM_HOOKRCRESULT     0x0382
+WM_HOTKEY   0x312    The WM_HOTKEY message is posted when the user presses a hot key registered by the RegisterHotKey function. The message is placed at the top of the message queue associated with the thread that registered the hot key.
+WM_HSCROLL  0x114    This message is sent to a window when a scroll event occurs in the window's standard horizontal scroll bar. This message is also sent to the owner of a horizontal scroll bar control when a scroll event occurs in the control.
+WM_HSCROLLCLIPBOARD  0x30E    The WM_HSCROLLCLIPBOARD message is sent to the clipboard owner by a clipboard viewer window. This occurs when the clipboard contains data in the CF_OWNERDISPLAY format and an event occurs in the clipboard viewer's horizontal scroll bar. The owner should scroll the clipboard image and update the scroll bar values.
+WM_ICONERASEBKGND    0x27  Windows NT 3.51 and earlier: The WM_ICONERASEBKGND message is sent to a minimized window when the background of the icon must be filled before painting the icon. A window receives this message only if a class icon is defined for the window; otherwise, WM_ERASEBKGND is sent. This message is not sent by newer versions of Windows.
+WM_IME_CHAR    0x286    Sent to an application when the IME gets a character of the conversion result. A window receives this message through its WindowProc function.
+WM_IME_COMPOSITION   0x10F    Sent to an application when the IME changes composition status as a result of a keystroke. A window receives this message through its WindowProc function.
+WM_IME_COMPOSITIONFULL  0x284    Sent to an application when the IME window finds no space to extend the area for the composition window. A window receives this message through its WindowProc function.
+WM_IME_CONTROL    0x283    Sent by an application to direct the IME window to carry out the requested command. The application uses this message to control the IME window that it has created. To send this message, the application calls the SendMessage function with the following parameters.
+WM_IME_ENDCOMPOSITION   0x10E    Sent to an application when the IME ends composition. A window receives this message through its WindowProc function.
+WM_IME_KEYDOWN    0x290    Sent to an application by the IME to notify the application of a key press and to keep message order. A window receives this message through its WindowProc function.
+WM_IME_KEYLAST    0x10F
+WM_IME_KEYUP   0x291    Sent to an application by the IME to notify the application of a key release and to keep message order. A window receives this message through its WindowProc function.
+WM_IME_NOTIFY  0x282    Sent to an application to notify it of changes to the IME window. A window receives this message through its WindowProc function.
+WM_IME_REPORT     0x0280
+WM_IME_REQUEST    0x288    Sent to an application to provide commands and request information. A window receives this message through its WindowProc function.
+WM_IME_SELECT  0x285    Sent to an application when the operating system is about to change the current IME. A window receives this message through its WindowProc function.
+WM_IME_SETCONTEXT    0x281    Sent to an application when a window is activated. A window receives this message through its WindowProc function.
+WM_IME_STARTCOMPOSITION    0x10D    Sent immediately before the IME generates the composition string as a result of a keystroke. A window receives this message through its WindowProc function.
+WM_IMEKEYDOWN     0x0290
+WM_IMEKEYUP     0x0291
+WM_INITDIALOG  0x110    The WM_INITDIALOG message is sent to the dialog box procedure immediately before a dialog box is displayed. Dialog box procedures typically use this message to initialize controls and carry out any other initialization tasks that affect the appearance of the dialog box.
+WM_INITMENU    0x116    The WM_INITMENU message is sent when a menu is about to become active. It occurs when the user clicks an item on the menu bar or presses a menu key. This allows the application to modify the menu before it is displayed.
+WM_INITMENUPOPUP  0x117    The WM_INITMENUPOPUP message is sent when a drop-down menu or submenu is about to become active. This allows an application to modify the menu before it is displayed, without changing the entire menu.
+WM_INPUT     0x00ff   The WM_INPUT message is sent to the window that is getting raw input.
+WM_INPUTLANGCHANGE   0x51  The WM_INPUTLANGCHANGE message is sent to the topmost affected window after an application's input language has been changed. You should make any application-specific settings and pass the message to the DefWindowProc function, which passes the message to all first-level child windows. These child windows can pass the message to DefWindowProc to have it pass the message to their child windows, and so on.
+WM_INPUTLANGCHANGEREQUEST  0x50  The WM_INPUTLANGCHANGEREQUEST message is posted to the window with the focus when the user chooses a new input language, either with the hotkey (specified in the Keyboard control panel application) or from the indicator on the system taskbar. An application can accept the change by passing the message to the DefWindowProc function or reject the change (and prevent it from taking place) by returning immediately.
+WM_INTERIM     0x010c
+WM_KEYDOWN  0x100    The WM_KEYDOWN message is posted to the window with the keyboard focus when a nonsystem key is pressed. A nonsystem key is a key that is pressed when the ALT key is not pressed.
+WM_KEYFIRST    0x100    This message filters for keyboard messages.
+WM_KEYLAST  0x108    This message filters for keyboard messages.
+WM_KEYUP    0x101    The WM_KEYUP message is posted to the window with the keyboard focus when a nonsystem key is released. A nonsystem key is a key that is pressed when the ALT key is not pressed, or a keyboard key that is pressed when a window has the keyboard focus.
+WM_KILLFOCUS   0x8   The WM_KILLFOCUS message is sent to a window immediately before it loses the keyboard focus.
+WM_LBUTTONDBLCLK  0x203    The WM_LBUTTONDBLCLK message is posted when the user double-clicks the left mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_LBUTTONDOWN    0x201    The WM_LBUTTONDOWN message is posted when the user presses the left mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_LBUTTONUP   0x202    The WM_LBUTTONUP message is posted when the user releases the left mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_MBUTTONDBLCLK  0x209    The WM_MBUTTONDBLCLK message is posted when the user double-clicks the middle mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_MBUTTONDOWN    0x207    The WM_MBUTTONDOWN message is posted when the user presses the middle mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_MBUTTONUP   0x208    The WM_MBUTTONUP message is posted when the user releases the middle mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_MDIACTIVATE    0x222    An application sends the WM_MDIACTIVATE message to a multiple-document interface (MDI) client window to instruct the client window to activate a different MDI child window.
+WM_MDICASCADE  0x227    An application sends the WM_MDICASCADE message to a multiple-document interface (MDI) client window to arrange all its child windows in a cascade format.
+WM_MDICREATE   0x220    An application sends the WM_MDICREATE message to a multiple-document interface (MDI) client window to create an MDI child window.
+WM_MDIDESTROY  0x221    An application sends the WM_MDIDESTROY message to a multiple-document interface (MDI) client window to close an MDI child window.
+WM_MDIGETACTIVE   0x229    An application sends the WM_MDIGETACTIVE message to a multiple-document interface (MDI) client window to retrieve the handle to the active MDI child window.
+WM_MDIICONARRANGE    0x228    An application sends the WM_MDIICONARRANGE message to a multiple-document interface (MDI) client window to arrange all minimized MDI child windows. It does not affect child windows that are not minimized.
+WM_MDIMAXIMIZE    0x225    An application sends the WM_MDIMAXIMIZE message to a multiple-document interface (MDI) client window to maximize an MDI child window. The system resizes the child window to make its client area fill the client window. The system places the child window's window menu icon in the rightmost position of the frame window's menu bar, and places the child window's restore icon in the leftmost position. The system also appends the title bar text of the child window to that of the frame window.
+WM_MDINEXT  0x224    An application sends the WM_MDINEXT message to a multiple-document interface (MDI) client window to activate the next or previous child window.
+WM_MDIREFRESHMENU    0x234    An application sends the WM_MDIREFRESHMENU message to a multiple-document interface (MDI) client window to refresh the window menu of the MDI frame window.
+WM_MDIRESTORE  0x223    An application sends the WM_MDIRESTORE message to a multiple-document interface (MDI) client window to restore an MDI child window from maximized or minimized size.
+WM_MDISETMENU  0x230    An application sends the WM_MDISETMENU message to a multiple-document interface (MDI) client window to replace the entire menu of an MDI frame window, to replace the window menu of the frame window, or both.
+WM_MDITILE  0x226    An application sends the WM_MDITILE message to a multiple-document interface (MDI) client window to arrange all of its MDI child windows in a tile format.
+WM_MEASUREITEM    0x2C  The WM_MEASUREITEM message is sent to the owner window of a combo box, list box, list view control, or menu item when the control or menu is created.
+WM_MENUCHAR    0x120    The WM_MENUCHAR message is sent when a menu is active and the user presses a key that does not correspond to any mnemonic or accelerator key. This message is sent to the window that owns the menu.
+WM_MENUCOMMAND    0x126    The WM_MENUCOMMAND message is sent when the user makes a selection from a menu.
+WM_MENUDRAG    0x123    The WM_MENUDRAG message is sent to the owner of a drag-and-drop menu when the user drags a menu item.
+WM_MENUGETOBJECT  0x124    The WM_MENUGETOBJECT message is sent to the owner of a drag-and-drop menu when the mouse cursor enters a menu item or moves from the center of the item to the top or bottom of the item.
+WM_MENURBUTTONUP  0x122    The WM_MENURBUTTONUP message is sent when the user releases the right mouse button while the cursor is on a menu item.
+WM_MENUSELECT  0x11F    The WM_MENUSELECT message is sent to a menu's owner window when the user selects a menu item.
+WM_MOUSEACTIVATE  0x21  The WM_MOUSEACTIVATE message is sent when the cursor is in an inactive window and the user presses a mouse button. The parent window receives this message only if the child window passes it to the DefWindowProc function.
+WM_MOUSEFIRST  0x200    Use WM_MOUSEFIRST to specify the first mouse message. Use the PeekMessage() Function.
+WM_MOUSEHOVER  0x2A1    The WM_MOUSEHOVER message is posted to a window when the cursor hovers over the client area of the window for the period of time specified in a prior call to TrackMouseEvent.
+WM_MOUSEHWHEEL    0x20E    The WM_MOUSEHWHEEL message is sent to the focus window when the mouse's horizontal scroll wheel is tilted or rotated. The DefWindowProc function propagates the message to the window's parent. There should be no internal forwarding of the message, since DefWindowProc propagates it up the parent chain until it finds a window that processes it.
+WM_MOUSELAST   0x20D    Use WM_MOUSELAST to specify the last mouse message. Used with PeekMessage() Function.
+WM_MOUSELEAVE  0x2A3    The WM_MOUSELEAVE message is posted to a window when the cursor leaves the client area of the window specified in a prior call to TrackMouseEvent.
+WM_MOUSEMOVE   0x200    The WM_MOUSEMOVE message is posted to a window when the cursor moves. If the mouse is not captured, the message is posted to the window that contains the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_MOUSEWHEEL  0x20A    The WM_MOUSEWHEEL message is sent to the focus window when the mouse wheel is rotated. The DefWindowProc function propagates the message to the window's parent. There should be no internal forwarding of the message, since DefWindowProc propagates it up the parent chain until it finds a window that processes it.
+WM_MOVE  0x3   The WM_MOVE message is sent after a window has been moved.
+WM_MOVING   0x216    The WM_MOVING message is sent to a window that the user is moving. By processing this message, an application can monitor the position of the drag rectangle and, if needed, change its position.
+WM_NCACTIVATE  0x86  Non Client Area Activated Caption(Title) of the Form
+WM_NCCALCSIZE  0x83  The WM_NCCALCSIZE message is sent when the size and position of a window's client area must be calculated. By processing this message, an application can control the content of the window's client area when the size or position of the window changes.
+WM_NCCREATE    0x81  The WM_NCCREATE message is sent prior to the WM_CREATE message when a window is first created.
+WM_NCDESTROY   0x82  The WM_NCDESTROY message informs a window that its nonclient area is being destroyed. The DestroyWindow function sends the WM_NCDESTROY message to the window following the WM_DESTROY message. WM_DESTROY is used to free the allocated memory object associated with the window.
+WM_NCHITTEST   0x84  The WM_NCHITTEST message is sent to a window when the cursor moves, or when a mouse button is pressed or released. If the mouse is not captured, the message is sent to the window beneath the cursor. Otherwise, the message is sent to the window that has captured the mouse.
+WM_NCLBUTTONDBLCLK   0xA3  The WM_NCLBUTTONDBLCLK message is posted when the user double-clicks the left mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCLBUTTONDOWN  0xA1  The WM_NCLBUTTONDOWN message is posted when the user presses the left mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCLBUTTONUP    0xA2  The WM_NCLBUTTONUP message is posted when the user releases the left mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCMBUTTONDBLCLK   0xA9  The WM_NCMBUTTONDBLCLK message is posted when the user double-clicks the middle mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCMBUTTONDOWN  0xA7  The WM_NCMBUTTONDOWN message is posted when the user presses the middle mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCMBUTTONUP    0xA8  The WM_NCMBUTTONUP message is posted when the user releases the middle mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCMOUSEHOVER   0x2A0    The WM_NCMOUSEHOVER message is posted to a window when the cursor hovers over the nonclient area of the window for the period of time specified in a prior call to TrackMouseEvent.
+WM_NCMOUSELEAVE   0x2A2    The WM_NCMOUSELEAVE message is posted to a window when the cursor leaves the nonclient area of the window specified in a prior call to TrackMouseEvent.
+WM_NCMOUSEMOVE    0xA0  The WM_NCMOUSEMOVE message is posted to a window when the cursor is moved within the nonclient area of the window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCPAINT  0x85  The WM_NCPAINT message is sent to a window when its frame must be painted.
+WM_NCRBUTTONDBLCLK   0xA6  The WM_NCRBUTTONDBLCLK message is posted when the user double-clicks the right mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCRBUTTONDOWN  0xA4  The WM_NCRBUTTONDOWN message is posted when the user presses the right mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCRBUTTONUP    0xA5  The WM_NCRBUTTONUP message is posted when the user releases the right mouse button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCUAHDRAWCAPTION  0xAE  The WM_NCUAHDRAWCAPTION message is an undocumented message related to themes. When handling WM_NCPAINT, this message should also be handled.
+WM_NCUAHDRAWFRAME    0xAF  The WM_NCUAHDRAWFRAME message is an undocumented message related to themes. When handling WM_NCPAINT, this message should also be handled.
+WM_NCXBUTTONDBLCLK   0xAD  The WM_NCXBUTTONDBLCLK message is posted when the user double-clicks the first or second X button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCXBUTTONDOWN  0xAB  The WM_NCXBUTTONDOWN message is posted when the user presses the first or second X button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NCXBUTTONUP    0xAC  The WM_NCXBUTTONUP message is posted when the user releases the first or second X button while the cursor is within the nonclient area of a window. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.
+WM_NEXTDLGCTL  0x28  The WM_NEXTDLGCTL message is sent to a dialog box procedure to set the keyboard focus to a different control in the dialog box
+WM_NEXTMENU    0x213    The WM_NEXTMENU message is sent to an application when the right or left arrow key is used to switch between the menu bar and the system menu.
+WM_NOTIFY   0x4E  Sent by a common control to its parent window when an event has occurred or the control requires some information.
+WM_NOTIFYFORMAT   0x55  Determines if a window accepts ANSI or Unicode structures in the WM_NOTIFY notification message. WM_NOTIFYFORMAT messages are sent from a common control to its parent window and from the parent window to the common control.
+WM_NULL  0x0   The WM_NULL message performs no operation. An application sends the WM_NULL message if it wants to post a message that the recipient window will ignore.
+WM_PAINT    0xF   The WM_PAINT message is sent when the system or another application makes a request to paint a portion of an application's window. The message is sent when the UpdateWindow or RedrawWindow function is called, or by the DispatchMessage function when the application obtains a WM_PAINT message by using the GetMessage or PeekMessage function. A window receives this message through its WindowProc function.
+WM_PAINTCLIPBOARD    0x309    The WM_PAINTCLIPBOARD message is sent to the clipboard owner by a clipboard viewer window when the clipboard contains data in the CF_OWNERDISPLAY format and the clipboard viewer's client area needs repainting.
+WM_PAINTICON   0x26  Windows NT 3.51 and earlier: The WM_PAINTICON message is sent to a minimized window when the icon is to be painted. This message is not sent by newer versions of Microsoft Windows, except in unusual circumstances explained in the Remarks.
+WM_PALETTECHANGED    0x311    This message is sent by the OS to all top-level and overlapped windows after the window with the keyboard focus realizes its logical palette. This message enables windows that do not have the keyboard focus to realize their logical palettes and update their client areas.
+WM_PALETTEISCHANGING    0x310    The WM_PALETTEISCHANGING message informs applications that an application is going to realize its logical palette.
+WM_PARENTNOTIFY   0x210    The WM_PARENTNOTIFY message is sent to the parent of a child window when the child window is created or destroyed, or when the user clicks a mouse button while the cursor is over the child window. When the child window is being created, the system sends WM_PARENTNOTIFY just before the CreateWindow or CreateWindowEx function that creates the window returns. When the child window is being destroyed, the system sends the message before any processing to destroy the window takes place.
+WM_PASTE    0x302    An application sends a WM_PASTE message to an edit control or combo box to copy the current content of the clipboard to the edit control at the current caret position. Data is inserted only if the clipboard contains data in CF_TEXT format.
+WM_PENCTL     0x0385
+WM_PENEVENT     0x0388
+WM_PENMISC     0x0386
+WM_PENMISCINFO     0x0383
+WM_PENWINFIRST    0x380
+WM_PENWINLAST  0x38F
+WM_POWER    0x48  Notifies applications that the system, typically a battery-powered personal computer, is about to enter a suspended mode. Obsolete : use POWERBROADCAST instead
+WM_POWERBROADCAST    0x218    Notifies applications that a power-management event has occurred.
+WM_PRINT    0x317    The WM_PRINT message is sent to a window to request that it draw itself in the specified device context, most commonly in a printer device context.
+WM_PRINTCLIENT    0x318    The WM_PRINTCLIENT message is sent to a window to request that it draw its client area in the specified device context, most commonly in a printer device context.
+WM_PSD_ENVSTAMPRECT     0x0405
+WM_PSD_FULLPAGERECT     0x0401
+WM_PSD_GREEKTEXTRECT     0x0404
+WM_PSD_MARGINRECT     0x0403
+WM_PSD_MINMARGINRECT     0x0402
+WM_PSD_PAGESETUPDLG     0x0400
+WM_PSD_YAFULLPAGERECT     0x0406
+WM_QUERYDRAGICON  0x37  The WM_QUERYDRAGICON message is sent to a minimized (iconic) window. The window is about to be dragged by the user but does not have an icon defined for its class. An application can return a handle to an icon or cursor. The system displays this cursor or icon while the user drags the icon.
+WM_QUERYENDSESSION   0x11  The WM_QUERYENDSESSION message is sent when the user chooses to end the session or when an application calls one of the system shutdown functions. If any application returns zero, the session is not ended. The system stops sending WM_QUERYENDSESSION messages as soon as one application returns zero. After processing this message, the system sends the WM_ENDSESSION message with the wParam parameter set to the results of the WM_QUERYENDSESSION message.
+WM_QUERYNEWPALETTE   0x30F    This message informs a window that it is about to receive the keyboard focus, giving the window the opportunity to realize its logical palette when it receives the focus.
+WM_QUERYOPEN   0x13  The WM_QUERYOPEN message is sent to an icon when the user requests that the window be restored to its previous size and position.
+WM_QUERYUISTATE     0x0129  An application sends the WM_QUERYUISTATE message to retrieve the user interface (UI) state for a window.
+WM_QUEUESYNC   0x23  The WM_QUEUESYNC message is sent by a computer-based training (CBT) application to separate user-input messages from other messages sent through the WH_JOURNALPLAYBACK Hook procedure.
+WM_QUIT  0x12  Once received, it ends the application's Message Loop, signaling the application to end. It can be sent by pressing Alt+F4, Clicking the X in the upper right-hand of the program, or going to File->Exit.
+WM_RASDIALEVENT     0xcccd
+WM_RBUTTONDBLCLK  0x206    he WM_RBUTTONDBLCLK message is posted when the user double-clicks the right mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_RBUTTONDOWN    0x204    The WM_RBUTTONDOWN message is posted when the user presses the right mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_RBUTTONUP   0x205    The WM_RBUTTONUP message is posted when the user releases the right mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_RCRESULT     0x0381
+WM_RENDERALLFORMATS  0x306    The WM_RENDERALLFORMATS message is sent to the clipboard owner before it is destroyed, if the clipboard owner has delayed rendering one or more clipboard formats. For the content of the clipboard to remain available to other applications, the clipboard owner must render data in all the formats it is capable of generating, and place the data on the clipboard by calling the SetClipboardData function.
+WM_RENDERFORMAT   0x305    The WM_RENDERFORMAT message is sent to the clipboard owner if it has delayed rendering a specific clipboard format and if an application has requested data in that format. The clipboard owner must render data in the specified format and place it on the clipboard by calling the SetClipboardData function.
+WM_SETCURSOR   0x20  The WM_SETCURSOR message is sent to a window if the mouse causes the cursor to move within a window and mouse input is not captured.
+WM_SETFOCUS    0x7   When the controll got the focus
+WM_SETFONT  0x30  An application sends a WM_SETFONT message to specify the font that a control is to use when drawing text.
+WM_SETHOTKEY   0x32  An application sends a WM_SETHOTKEY message to a window to associate a hot key with the window. When the user presses the hot key, the system activates the window.
+WM_SETICON  0x80  An application sends the WM_SETICON message to associate a new large or small icon with a window. The system displays the large icon in the ALT+TAB dialog box, and the small icon in the window caption.
+WM_SETREDRAW   0xB   An application sends the WM_SETREDRAW message to a window to allow changes in that window to be redrawn or to prevent changes in that window from being redrawn.
+WM_SETTEXT  0xC   Text Caption changed on the control. An application sends a WM_SETTEXT message to set the text of a window.
+WM_SETTINGCHANGE  0x1A  An application sends the WM_SETTINGCHANGE message to all top-level windows after making a change to the WIN.INI file. The SystemParametersInfo function sends this message after an application uses the function to change a setting in WIN.INI.
+WM_SHOWWINDOW  0x18  The WM_SHOWWINDOW message is sent to a window when the window is about to be hidden or shown
+WM_SIZE  0x5   The WM_SIZE message is sent to a window after its size has changed.
+WM_SIZECLIPBOARD  0x30B    The WM_SIZECLIPBOARD message is sent to the clipboard owner by a clipboard viewer window when the clipboard contains data in the CF_OWNERDISPLAY format and the clipboard viewer's client area has changed size.
+WM_SIZING   0x214    The WM_SIZING message is sent to a window that the user is resizing. By processing this message, an application can monitor the size and position of the drag rectangle and, if needed, change its size or position.
+WM_SKB     0x0384
+WM_SPOOLERSTATUS  0x2A  The WM_SPOOLERSTATUS message is sent from Print Manager whenever a job is added to or removed from the Print Manager queue.
+WM_STYLECHANGED   0x7D  The WM_STYLECHANGED message is sent to a window after the SetWindowLong function has changed one or more of the window's styles.
+WM_STYLECHANGING  0x7C  The WM_STYLECHANGING message is sent to a window when the SetWindowLong function is about to change one or more of the window's styles.
+WM_SYNCPAINT   0x88  The WM_SYNCPAINT message is used to synchronize painting while avoiding linking independent GUI threads.
+WM_SYSCHAR  0x106    The WM_SYSCHAR message is posted to the window with the keyboard focus when a WM_SYSKEYDOWN message is translated by the TranslateMessage function. It specifies the character code of a system character key — that is, a character key that is pressed while the ALT key is down.
+WM_SYSCOLORCHANGE    0x15  This message is sent to all top-level windows when a change is made to a system color setting.
+WM_SYSCOMMAND  0x112    A window receives this message when the user chooses a command from the Window menu (formerly known as the system or control menu) or when the user chooses the maximize button, minimize button, restore button, or close button.
+WM_SYSDEADCHAR    0x107    The WM_SYSDEADCHAR message is sent to the window with the keyboard focus when a WM_SYSKEYDOWN message is translated by the TranslateMessage function. WM_SYSDEADCHAR specifies the character code of a system dead key — that is, a dead key that is pressed while holding down the ALT key.
+WM_SYSKEYDOWN  0x104    The WM_SYSKEYDOWN message is posted to the window with the keyboard focus when the user presses the F10 key (which activates the menu bar) or holds down the ALT key and then presses another key. It also occurs when no window currently has the keyboard focus; in this case, the WM_SYSKEYDOWN message is sent to the active window. The window that receives the message can distinguish between these two contexts by checking the context code in the lParam parameter.
+WM_SYSKEYUP    0x105    The WM_SYSKEYUP message is posted to the window with the keyboard focus when the user releases a key that was pressed while the ALT key was held down. It also occurs when no window currently has the keyboard focus; in this case, the WM_SYSKEYUP message is sent to the active window. The window that receives the message can distinguish between these two contexts by checking the context code in the lParam parameter.
+WM_SYSTIMER     0x0118  WM_SYSTIMER is a well-known yet still undocumented message. Windows uses WM_SYSTIMER for internal actions like scrolling.
+WM_TCARD    0x52  Sent to an application that has initiated a training card with Microsoft Windows Help. The message informs the application when the user clicks an authorable button. An application initiates a training card by specifying the HELP_TCARD command in a call to the WinHelp function.
+WM_TIMECHANGE  0x1E  A message that is sent whenever there is a change in the system time.
+WM_TIMER    0x113    The WM_TIMER message is posted to the installing thread's message queue when a timer expires. The message is posted by the GetMessage or PeekMessage function.
+WM_UNDO  0x304    An application sends a WM_UNDO message to an edit control to undo the last operation. When this message is sent to an edit control, the previously deleted text is restored or the previously added text is deleted.
+WM_UNICHAR     0x0109 he WM_UNICHAR message is posted to the window with the keyboard focus when a WM_KEYDOWN message is translated by the TranslateMessage function. The WM_UNICHAR message contains the character code of the key that was pressed. The WM_UNICHAR message is equivalent to WM_CHAR, but it uses Unicode Transformation Format (UTF)-32, whereas WM_CHAR uses UTF-16. It is designed to send or post Unicode characters to ANSI windows and it can can handle Unicode Supplementary Plane characters.
+WM_UNINITMENUPOPUP   0x125    The WM_UNINITMENUPOPUP message is sent when a drop-down menu or submenu has been destroyed.
+WM_UPDATEUISTATE     0x0128  An application sends the WM_UPDATEUISTATE message to change the user interface (UI) state for the specified window and all its child windows.
+WM_USER  0x400    The WM_USER constant is used by applications to help define private messages for use by private window classes, usually of the form WM_USER+X, where X is an integer value.
+WM_USERCHANGED    0x54  The WM_USERCHANGED message is sent to all windows after the user has logged on or off. When the user logs on or off, the system updates the user-specific settings. The system sends this message immediately after updating the settings.
+WM_VKEYTOITEM  0x2E  Sent by a list box with the LBS_WANTKEYBOARDINPUT style to its owner in response to a WM_KEYDOWN message.
+WM_VSCROLL  0x115    The WM_VSCROLL message is sent to a window when a scroll event occurs in the window's standard vertical scroll bar. This message is also sent to the owner of a vertical scroll bar control when a scroll event occurs in the control.
+WM_VSCROLLCLIPBOARD  0x30A    The WM_VSCROLLCLIPBOARD message is sent to the clipboard owner by a clipboard viewer window when the clipboard contains data in the CF_OWNERDISPLAY format and an event occurs in the clipboard viewer's vertical scroll bar. The owner should scroll the clipboard image and update the scroll bar values.
+WM_WINDOWPOSCHANGED  0x47  The WM_WINDOWPOSCHANGED message is sent to a window whose size, position, or place in the Z order has changed as a result of a call to the SetWindowPos function or another window-management function.
+WM_WINDOWPOSCHANGING    0x46  The WM_WINDOWPOSCHANGING message is sent to a window whose size, position, or place in the Z order is about to change as a result of a call to the SetWindowPos function or another window-management function.
+WM_WININICHANGE   0x1A  An application sends the WM_WININICHANGE message to all top-level windows after making a change to the WIN.INI file. The SystemParametersInfo function sends this message after an application uses the function to change a setting in WIN.INI. Note The WM_WININICHANGE message is provided only for compatibility with earlier versions of the system. Applications should use the WM_SETTINGCHANGE message.
+WM_WNT_CONVERTREQUESTEX     0x0109
+WM_XBUTTONDBLCLK  0x20D    The WM_XBUTTONDBLCLK message is posted when the user double-clicks the first or second X button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_XBUTTONDOWN    0x20B    The WM_XBUTTONDOWN message is posted when the user presses the first or second X button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+WM_XBUTTONUP   0x20C    The WM_XBUTTONUP message is posted when the user releases the first or second X button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.
+ACM_OPENA     0x0464
+ACM_OPENW     0x0467
+ACM_PLAY     0x0465
+ACM_STOP     0x0466
+BFFM_ENABLEOK     0x0465
+BFFM_SETSELECTIONA     0x0466
+BFFM_SETSELECTIONW     0x0467
+BFFM_SETSTATUSTEXTA     0x0464
+BFFM_SETSTATUSTEXTW     0x0468
+BM_CLICK     0x00f5
+BM_GETCHECK     0x00f0
+BM_GETIMAGE     0x00f6
+BM_GETSTATE     0x00f2
+BM_SETCHECK     0x00f1
+BM_SETDONTCLICK     0x00f8
+BM_SETIMAGE     0x00f7
+BM_SETSTATE     0x00f3
+BM_SETSTYLE     0x00f4
+CBEM_GETCOMBOCONTROL     0x0406
+CBEM_GETEDITCONTROL     0x0407
+CBEM_GETEXSTYLE     0x0409
+CBEM_GETEXTENDEDSTYLE     0x0409
+CBEM_GETIMAGELIST     0x0403
+CBEM_GETITEMA     0x0404
+CBEM_GETITEMW     0x040d
+CBEM_HASEDITCHANGED     0x040a
+CBEM_INSERTITEMA     0x0401
+CBEM_INSERTITEMW     0x040b
+CBEM_SETEXSTYLE     0x0408
+CBEM_SETEXTENDEDSTYLE     0x040e
+CBEM_SETIMAGELIST     0x0402
+CBEM_SETITEMA     0x0405
+CBEM_SETITEMW     0x040c
+CDM_FIRST     0x0464
+CDM_GETFILEPATH     0x0465
+CDM_GETFOLDERIDLIST     0x0467
+CDM_GETFOLDERPATH     0x0466
+CDM_GETSPEC     0x0464
+CDM_HIDECONTROL     0x0469
+CDM_LAST     0x04c8
+CDM_SETCONTROLTEXT     0x0468
+CDM_SETDEFEXT     0x046a
+DDM_BEGIN     0x0403
+DDM_CLOSE     0x0402
+DDM_DRAW     0x0401
+DDM_END     0x0404
+DDM_SETFMT     0x0400
+DL_BEGINDRAG     0x0485
+DL_CANCELDRAG     0x0488
+DL_DRAGGING     0x0486
+DL_DROPPED     0x0487
+DM_GETDEFID     0x0400
+DM_REPOSITION     0x0402
+DM_SETDEFID     0x0401
+EM_AUTOURLDETECT     0x045b
+EM_CANPASTE     0x0432
+EM_CANREDO     0x0455
+EM_CANUNDO     0x00c6
+EM_CHARFROMPOS     0x00d7
+EM_CONVPOSITION     0x046c
+EM_CONVPOSITION     0x046c
+EM_DISPLAYBAND     0x0433
+EM_EMPTYUNDOBUFFER     0x00cd
+EM_EXGETSEL     0x0434
+EM_EXLIMITTEXT     0x0435
+EM_EXLINEFROMCHAR     0x0436
+EM_EXSETSEL     0x0437
+EM_FINDTEXT     0x0438
+EM_FINDTEXTEX     0x044f
+EM_FINDTEXTEXW     0x047c
+EM_FINDTEXTW     0x047b
+EM_FINDWORDBREAK     0x044c
+EM_FMTLINES     0x00c8
+EM_FORMATRANGE     0x0439
+EM_GETAUTOURLDETECT     0x045c
+EM_GETBIDIOPTIONS     0x04c9
+EM_GETCHARFORMAT     0x043a
+EM_GETCTFMODEBIAS     0x04ed
+EM_GETCTFOPENSTATUS     0x04f0
+EM_GETEDITSTYLE     0x04cd
+EM_GETEVENTMASK     0x043b
+EM_GETFIRSTVISIBLELINE     0x00ce
+EM_GETHANDLE     0x00bd
+EM_GETHYPHENATEINFO     0x04e6
+EM_GETIMECOLOR     0x0469
+EM_GETIMECOMPMODE     0x047a
+EM_GETIMECOMPTEXT     0x04f2
+EM_GETIMEMODEBIAS     0x047f
+EM_GETIMEOPTIONS     0x046b
+EM_GETIMEPROPERTY     0x04f4
+EM_GETIMESTATUS     0x00d9
+EM_GETLANGOPTIONS     0x0479
+EM_GETLIMITTEXT     0x00d5
+EM_GETLINE     0x00c4
+EM_GETLINECOUNT     0x00ba
+EM_GETMARGINS     0x00d4
+EM_GETMODIFY     0x00b8
+EM_GETOLEINTERFACE     0x043c
+EM_GETOPTIONS     0x044e
+EM_GETPAGE     0x04e4
+EM_GETPAGEROTATE     0x04eb
+EM_GETPARAFORMAT     0x043d
+EM_GETPASSWORDCHAR     0x00d2
+EM_GETPUNCTUATION     0x0465
+EM_GETQUERYRTFOBJ     0x050d
+EM_GETRECT     0x00b2
+EM_GETREDONAME     0x0457
+EM_GETSCROLLPOS     0x04dd
+EM_GETSCROLLPOS     0x04dd
+EM_GETSEL     0x00b0
+EM_GETSELTEXT     0x043e
+EM_GETTEXTEX     0x045e
+EM_GETTEXTLENGTHEX     0x045f
+EM_GETTEXTMODE     0x045a
+EM_GETTEXTRANGE     0x044b
+EM_GETTHUMB     0x00be
+EM_GETTYPOGRAPHYOPTIONS     0x04cb
+EM_GETUNDONAME     0x0456
+EM_GETVIEWKIND     0x04e2
+EM_GETWORDBREAKPROC     0x00d1
+EM_GETWORDBREAKPROCEX     0x0450
+EM_GETWORDWRAPMODE     0x0467
+EM_GETZOOM     0x04e0
+EM_HIDESELECTION     0x043f
+EM_ISIME     0x04f3
+EM_LIMITTEXT     0x00c5
+EM_LINEFROMCHAR     0x00c9
+EM_LINEINDEX     0x00bb
+EM_LINELENGTH     0x00c1
+EM_LINESCROLL     0x00b6
+EM_OUTLINE     0x04dc
+EM_OUTLINE     0x04dc
+EM_PASTESPECIAL     0x0440
+EM_POSFROMCHAR     0x00d6
+EM_RECONVERSION     0x047d
+EM_REDO     0x0454
+EM_REPLACESEL     0x00c2
+EM_REQUESTRESIZE     0x0441
+EM_SCROLL     0x00b5
+EM_SCROLLCARET     0x00b7
+EM_SELECTIONTYPE     0x0442
+EM_SETBIDIOPTIONS     0x04c8
+EM_SETBKGNDCOLOR     0x0443
+EM_SETCHARFORMAT     0x0444
+EM_SETCTFMODEBIAS     0x04ee
+EM_SETCTFOPENSTATUS     0x04f1
+EM_SETEDITSTYLE     0x04cc
+EM_SETEVENTMASK     0x0445
+EM_SETFONT     0x00c3
+EM_SETFONTSIZE     0x04df
+EM_SETFONTSIZE     0x04df
+EM_SETHANDLE     0x00bc
+EM_SETHYPHENATEINFO     0x04e7
+EM_SETIMECOLOR     0x0468
+EM_SETIMEMODEBIAS     0x047e
+EM_SETIMEOPTIONS     0x046a
+EM_SETIMESTATUS     0x00d8
+EM_SETLANGOPTIONS     0x0478
+EM_SETLIMITTEXT     0x00c5
+EM_SETMARGINS     0x00d3
+EM_SETMODIFY     0x00b9
+EM_SETOLECALLBACK     0x0446
+EM_SETOPTIONS     0x044d
+EM_SETPAGE     0x04e5
+EM_SETPAGEROTATE     0x04ec
+EM_SETPALETTE     0x045d
+EM_SETPARAFORMAT     0x0447
+EM_SETPASSWORDCHAR     0x00cc
+EM_SETPUNCTUATION     0x0464
+EM_SETQUERYRTFOBJ     0x050e
+EM_SETREADONLY     0x00cf
+EM_SETRECT     0x00b3
+EM_SETRECTNP     0x00b4
+EM_SETSCROLLPOS     0x04de
+EM_SETSCROLLPOS     0x04de
+EM_SETSEL     0x00b1
+EM_SETTABSTOPS     0x00cb
+EM_SETTARGETDEVICE     0x0448
+EM_SETTEXTEX     0x0461
+EM_SETTEXTMODE     0x0459
+EM_SETTYPOGRAPHYOPTIONS     0x04ca
+EM_SETUNDOLIMIT     0x0452
+EM_SETVIEWKIND     0x04e3
+EM_SETWORDBREAK     0x00ca
+EM_SETWORDBREAKPROC     0x00d0
+EM_SETWORDBREAKPROCEX     0x0451
+EM_SETWORDWRAPMODE     0x0466
+EM_SETZOOM     0x04e1
+EM_SHOWSCROLLBAR     0x0460
+EM_STOPGROUPTYPING     0x0458
+EM_STREAMIN     0x0449
+EM_STREAMOUT     0x044a
+EM_UNDO     0x00c7
+FM_GETDRIVEINFOA     0x0601
+FM_GETDRIVEINFOW     0x0611
+FM_GETFILESELA     0x0604
+FM_GETFILESELLFNA     0x0605
+FM_GETFILESELLFNW     0x0615
+FM_GETFILESELW     0x0614
+FM_GETFOCUS     0x0600
+FM_GETSELCOUNT     0x0602
+FM_GETSELCOUNTLFN     0x0603
+FM_REFRESH_WINDOWS     0x0606
+FM_RELOAD_EXTENSIONS     0x0607
+HKM_GETHOTKEY     0x0402
+HKM_SETHOTKEY     0x0401
+HKM_SETRULES     0x0403
+IE_DOCOMMAND     0x04c8
+IE_GETAPPDATA     0x04b8
+IE_GETBKGND     0x049c
+IE_GETCOMMAND     0x04c9
+IE_GETCOUNT     0x04ca
+IE_GETDRAWOPTS     0x04ba
+IE_GETERASERTIP     0x049a
+IE_GETFORMAT     0x04bc
+IE_GETGESTURE     0x04cb
+IE_GETGRIDORIGIN     0x049e
+IE_GETGRIDPEN     0x04a0
+IE_GETGRIDSIZE     0x04a2
+IE_GETINK     0x0496
+IE_GETINKINPUT     0x04be
+IE_GETINKRECT     0x04a6
+IE_GETMENU     0x04cc
+IE_GETMODE     0x04a4
+IE_GETNOTIFY     0x04c0
+IE_GETPAINTDC     0x04cd
+IE_GETPDEVENT     0x04ce
+IE_GETPENTIP     0x0498
+IE_GETRECOG     0x04c2
+IE_GETSECURITY     0x04c4
+IE_GETSEL     0x04c6
+IE_GETSELCOUNT     0x04cf
+IE_GETSELITEMS     0x04d0
+IE_GETSTYLE     0x04d1
+IE_MSGFIRST     0x0496
+IE_SETAPPDATA     0x04b9
+IE_SETBKGND     0x049d
+IE_SETDRAWOPTS     0x04bb
+IE_SETERASERTIP     0x049b
+IE_SETFORMAT     0x04bd
+IE_SETGRIDORIGIN     0x049f
+IE_SETGRIDPEN     0x04a1
+IE_SETGRIDSIZE     0x04a3
+IE_SETINK     0x0497
+IE_SETINKINPUT     0x04bf
+IE_SETMODE     0x04a5
+IE_SETNOTIFY     0x04c1
+IE_SETPENTIP     0x0499
+IE_SETRECOG     0x04c3
+IE_SETSECURITY     0x04c5
+IE_SETSEL     0x04c7
+IPM_CLEARADDRESS     0x0464
+IPM_GETADDRESS     0x0466
+IPM_ISBLANK     0x0469
+IPM_SETADDRESS     0x0465
+IPM_SETFOCUS     0x0468
+IPM_SETRANGE     0x0467
+LVM_APPROXIMATEVIEWRECT     0x1040
+LVM_ARRANGE     0x1016
+LVM_CANCELEDITLABEL     0x10b3
+LVM_CREATEDRAGIMAGE     0x1021
+LVM_DELETEALLITEMS     0x1009
+LVM_DELETECOLUMN     0x101c
+LVM_DELETEITEM     0x1008
+LVM_EDITLABELA     0x1017
+LVM_EDITLABELW     0x1076
+LVM_ENABLEGROUPVIEW     0x109d
+LVM_ENSUREVISIBLE     0x1013
+LVM_FINDITEMA     0x100d
+LVM_FINDITEMW     0x1053
+LVM_FIRST     0x1000
+LVM_GETBKCOLOR     0x1000
+LVM_GETBKIMAGEA     0x1045
+LVM_GETBKIMAGEW     0x108b
+LVM_GETCALLBACKMASK     0x100a
+LVM_GETCOLUMNA     0x1019
+LVM_GETCOLUMNORDERARRAY     0x103b
+LVM_GETCOLUMNW     0x105f
+LVM_GETCOLUMNWIDTH     0x101d
+LVM_GETCOUNTPERPAGE     0x1028
+LVM_GETEDITCONTROL     0x1018
+LVM_GETEXTENDEDLISTVIEWSTYLE     0x1037
+LVM_GETGROUPINFO     0x1095
+LVM_GETGROUPMETRICS     0x109c
+LVM_GETHEADER     0x101f
+LVM_GETHOTCURSOR     0x103f
+LVM_GETHOTITEM     0x103d
+LVM_GETHOVERTIME     0x1048
+LVM_GETIMAGELIST     0x1002
+LVM_GETINSERTMARK     0x10a7
+LVM_GETINSERTMARKCOLOR     0x10ab
+LVM_GETINSERTMARKRECT     0x10a9
+LVM_GETISEARCHSTRINGA     0x1034
+LVM_GETISEARCHSTRINGW     0x1075
+LVM_GETITEMA     0x1005
+LVM_GETITEMCOUNT     0x1004
+LVM_GETITEMPOSITION     0x1010
+LVM_GETITEMRECT     0x100e
+LVM_GETITEMSPACING     0x1033
+LVM_GETITEMSTATE     0x102c
+LVM_GETITEMTEXTA     0x102d
+LVM_GETITEMTEXTW     0x1073
+LVM_GETITEMW     0x104b
+LVM_GETNEXTITEM     0x100c
+LVM_GETNUMBEROFWORKAREAS     0x1049
+LVM_GETORIGIN     0x1029
+LVM_GETOUTLINECOLOR     0x10b0
+LVM_GETSELECTEDCOLUMN     0x10ae
+LVM_GETSELECTEDCOUNT     0x1032
+LVM_GETSELECTIONMARK     0x1042
+LVM_GETSTRINGWIDTHA     0x1011
+LVM_GETSTRINGWIDTHW     0x1057
+LVM_GETSUBITEMRECT     0x1038
+LVM_GETTEXTBKCOLOR     0x1025
+LVM_GETTEXTCOLOR     0x1023
+LVM_GETTILEINFO     0x10a5
+LVM_GETTILEVIEWINFO     0x10a3
+LVM_GETTOOLTIPS     0x104e
+LVM_GETTOPINDEX     0x1027
+LVM_GETUNICODEFORMAT     0x2006
+LVM_GETVIEW     0x108f
+LVM_GETVIEWRECT     0x1022
+LVM_GETWORKAREAS     0x1046
+LVM_HASGROUP     0x10a1
+LVM_HITTEST     0x1012
+LVM_INSERTCOLUMNA     0x101b
+LVM_INSERTCOLUMNW     0x1061
+LVM_INSERTGROUP     0x1091
+LVM_INSERTGROUPSORTED     0x109f
+LVM_INSERTITEMA     0x1007
+LVM_INSERTITEMW     0x104d
+LVM_INSERTMARKHITTEST     0x10a8
+LVM_ISGROUPVIEWENABLED     0x10af
+LVM_ISITEMVISIBLE     0x10b6
+LVM_MAPIDTOINDEX     0x10b5
+LVM_MAPINDEXTOID     0x10b4
+LVM_MOVEGROUP     0x1097
+LVM_MOVEITEMTOGROUP     0x109a
+LVM_REDRAWITEMS     0x1015
+LVM_REMOVEALLGROUPS     0x10a0
+LVM_REMOVEGROUP     0x1096
+LVM_SCROLL     0x1014
+LVM_SETBKCOLOR     0x1001
+LVM_SETBKIMAGEA     0x1044
+LVM_SETCALLBACKMASK     0x100b
+LVM_SETCOLUMNA     0x101a
+LVM_SETCOLUMNORDERARRAY     0x103a
+LVM_SETCOLUMNW     0x1060
+LVM_SETCOLUMNWIDTH     0x101e
+LVM_SETEXTENDEDLISTVIEWSTYLE     0x1036
+LVM_SETGROUPINFO     0x1093
+LVM_SETGROUPMETRICS     0x109b
+LVM_SETHOTCURSOR     0x103e
+LVM_SETHOTITEM     0x103c
+LVM_SETHOVERTIME     0x1047
+LVM_SETICONSPACING     0x1035
+LVM_SETIMAGELIST     0x1003
+LVM_SETINFOTIP     0x10ad
+LVM_SETINSERTMARK     0x10a6
+LVM_SETINSERTMARKCOLOR     0x10aa
+LVM_SETITEMA     0x1006
+LVM_SETITEMCOUNT     0x102f
+LVM_SETITEMPOSITION     0x100f
+LVM_SETITEMPOSITION32     0x1031
+LVM_SETITEMSTATE     0x102b
+LVM_SETITEMTEXTA     0x102e
+LVM_SETITEMTEXTW     0x1074
+LVM_SETITEMW     0x104c
+LVM_SETOUTLINECOLOR     0x10b1
+LVM_SETSELECTEDCOLUMN     0x108c
+LVM_SETSELECTIONMARK     0x1043
+LVM_SETTEXTBKCOLOR     0x1026
+LVM_SETTEXTCOLOR     0x1024
+LVM_SETTILEINFO     0x10a4
+LVM_SETTILEVIEWINFO     0x10a2
+LVM_SETTILEWIDTH     0x108d
+LVM_SETTOOLTIPS     0x104a
+LVM_SETUNICODEFORMAT     0x2005
+LVM_SETVIEW     0x108e
+LVM_SETWORKAREAS     0x1041
+LVM_SORTGROUPS     0x109e
+LVM_SORTITEMS     0x1030
+LVM_SUBITEMHITTEST     0x1039
+LVM_UPDATE     0x102a
+MCIWNDM_CAN_CONFIG     0x0495
+MCIWNDM_CAN_EJECT     0x0494
+MCIWNDM_CAN_PLAY     0x0490
+MCIWNDM_CAN_RECORD     0x0492
+MCIWNDM_CAN_SAVE     0x0493
+MCIWNDM_CAN_WINDOW     0x0491
+MCIWNDM_GET_DEST     0x048e
+MCIWNDM_GET_SOURCE     0x048c
+MCIWNDM_GETDEVICEA     0x047d
+MCIWNDM_GETDEVICEW     0x04e1
+MCIWNDM_GETERRORA     0x0480
+MCIWNDM_GETERRORW     0x04e4
+MCIWNDM_GETFILENAMEA     0x047c
+MCIWNDM_GETFILENAMEW     0x04e0
+MCIWNDM_GETINACTIVETIMER     0x0485
+MCIWNDM_GETPALETTE     0x047e
+MCIWNDM_GETTIMEFORMATA     0x0478
+MCIWNDM_GETTIMEFORMATW     0x04dc
+MCIWNDM_GETZOOM     0x046d
+MCIWNDM_NOTIFYERROR     0x04cd
+MCIWNDM_NOTIFYMEDIA     0x04cb
+MCIWNDM_NOTIFYMODE     0x04c8
+MCIWNDM_PALETTEKICK     0x0496
+MCIWNDM_PLAYTO     0x047b
+MCIWNDM_PUT_DEST     0x048f
+MCIWNDM_PUT_SOURCE     0x048d
+MCIWNDM_REALIZE     0x0476
+MCIWNDM_SETINACTIVETIMER     0x0483
+MCIWNDM_SETPALETTE     0x047f
+MCIWNDM_SETTIMEFORMATA     0x0477
+MCIWNDM_SETTIMEFORMATW     0x04db
+MCIWNDM_VALIDATEMEDIA     0x0479
+MSG_FTS_JUMP_QWORD     0x0423
+MSG_FTS_JUMP_VA     0x0421
+MSG_FTS_WHERE_IS_IT     0x0425
+MSG_GET_DEFFONT     0x042d
+MSG_REINDEX_REQUEST     0x0424
+NIN_SELECT     0x0400
+OCM__BASE     0x2000
+OCM_CHARTOITEM     0x202f
+OCM_COMMAND     0x2111
+OCM_COMPAREITEM     0x2039
+OCM_CTLCOLOR     0x2019
+OCM_CTLCOLORBTN     0x2135
+OCM_CTLCOLORDLG     0x2136
+OCM_CTLCOLOREDIT     0x2133
+OCM_CTLCOLORLISTBOX     0x2134
+OCM_CTLCOLORMSGBOX     0x2132
+OCM_CTLCOLORSCROLLBAR     0x2137
+OCM_CTLCOLORSTATIC     0x2138
+OCM_DELETEITEM     0x202d
+OCM_DRAWITEM     0x202b
+OCM_HSCROLL     0x2114
+OCM_MEASUREITEM     0x202c
+OCM_NOTIFY     0x204e
+OCM_PARENTNOTIFY     0x2210
+OCM_VKEYTOITEM     0x202e
+OCM_VSCROLL     0x2115
+PBM_DELTAPOS     0x0403
+PBM_GETPOS     0x0408
+PBM_GETRANGE     0x0407
+PBM_SETBARCOLOR     0x0409
+PBM_SETPOS     0x0402
+PBM_SETRANGE     0x0401
+PBM_SETRANGE32     0x0406
+PBM_SETSTEP     0x0404
+PBM_STEPIT     0x0405
+PSM_ADDPAGE     0x0467
+PSM_APPLY     0x046e
+PSM_CANCELTOCLOSE     0x046b
+PSM_CHANGED     0x0468
+PSM_GETCURRENTPAGEHWND     0x0476
+PSM_GETRESULT     0x0487
+PSM_GETTABCONTROL     0x0474
+PSM_HWNDTOINDEX     0x0481
+PSM_IDTOINDEX     0x0485
+PSM_INDEXTOHWND     0x0482
+PSM_INDEXTOID     0x0486
+PSM_INDEXTOPAGE     0x0484
+PSM_INSERTPAGE     0x0477
+PSM_ISDIALOGMESSAGE     0x0475
+PSM_PAGETOINDEX     0x0483
+PSM_PRESSBUTTON     0x0471
+PSM_QUERYSIBLINGS     0x046c
+PSM_REBOOTSYSTEM     0x046a
+PSM_RECALCPAGESIZES     0x0488
+PSM_REMOVEPAGE     0x0466
+PSM_RESTARTWINDOWS     0x0469
+PSM_SETCURSEL     0x0465
+PSM_SETCURSELID     0x0472
+PSM_SETFINISHTEXTA     0x0473
+PSM_SETFINISHTEXTW     0x0479
+PSM_SETHEADERSUBTITLEA     0x047f
+PSM_SETHEADERSUBTITLEW     0x0480
+PSM_SETHEADERTITLEA     0x047d
+PSM_SETHEADERTITLEW     0x047e
+PSM_SETTITLEA     0x046f
+PSM_SETTITLEW     0x0478
+PSM_SETWIZBUTTONS     0x0470
+PSM_UNCHANGED     0x046d
+RB_BEGINDRAG     0x0418
+RB_DELETEBAND     0x0402
+RB_DRAGMOVE     0x041a
+RB_ENDDRAG     0x0419
+RB_GETBANDBORDERS     0x0422
+RB_GETBANDCOUNT     0x040c
+RB_GETBANDINFOA     0x041d
+RB_GETBANDINFOW     0x041c
+RB_GETBARHEIGHT     0x041b
+RB_GETBARINFO     0x0403
+RB_GETBKCOLOR     0x0414
+RB_GETPALETTE     0x0426
+RB_GETRECT     0x0409
+RB_GETROWCOUNT     0x040d
+RB_GETROWHEIGHT     0x040e
+RB_GETTEXTCOLOR     0x0416
+RB_GETTOOLTIPS     0x0411
+RB_HITTEST     0x0408
+RB_IDTOINDEX     0x0410
+RB_INSERTBANDA     0x0401
+RB_INSERTBANDW     0x040a
+RB_MAXIMIZEBAND     0x041f
+RB_MINIMIZEBAND     0x041e
+RB_MOVEBAND     0x0427
+RB_PUSHCHEVRON     0x042b
+RB_SETBANDINFOA     0x0406
+RB_SETBANDINFOW     0x040b
+RB_SETBARINFO     0x0404
+RB_SETBKCOLOR     0x0413
+RB_SETPALETTE     0x0425
+RB_SETPARENT     0x0407
+RB_SETTEXTCOLOR     0x0415
+RB_SETTOOLTIPS     0x0412
+RB_SHOWBAND     0x0423
+RB_SIZETORECT     0x0417
+SB_GETBORDERS     0x0407
+SB_GETICON     0x0414
+SB_GETPARTS     0x0406
+SB_GETRECT     0x040a
+SB_GETTEXTA     0x0402
+SB_GETTEXTLENGTHA     0x0403
+SB_GETTEXTLENGTHW     0x040c
+SB_GETTEXTW     0x040d
+SB_GETTIPTEXTA     0x0412
+SB_GETTIPTEXTW     0x0413
+SB_ISSIMPLE     0x040e
+SB_SETICON     0x040f
+SB_SETMINHEIGHT     0x0408
+SB_SETPARTS     0x0404
+SB_SETTEXTA     0x0401
+SB_SETTEXTW     0x040b
+SB_SETTIPTEXTA     0x0410
+SB_SETTIPTEXTW     0x0411
+SB_SIMPLE     0x0409
+SBM_ENABLE_ARROWS     0x00e4
+SBM_GETPOS     0x00e1
+SBM_GETRANGE     0x00e3
+SBM_GETSCROLLBARINFO     0x00eb
+SBM_GETSCROLLINFO     0x00ea
+SBM_SETPOS     0x00e0
+SBM_SETRANGE     0x00e2
+SBM_SETRANGEREDRAW     0x00e6
+SBM_SETSCROLLINFO     0x00e9
+SM_GETCURFOCUSA     0x07eb
+SM_GETCURFOCUSW     0x07ec
+SM_GETOPTIONS     0x07ed
+SM_GETSELCOUNT     0x07e8
+SM_GETSERVERSELA     0x07e9
+SM_GETSERVERSELW     0x07ea
+TAPI_REPLY     0x0463
+TB_ADDBITMAP     0x0413
+TB_ADDBUTTONSA     0x0414
+TB_ADDBUTTONSW     0x0444
+TB_ADDSTRINGA     0x041c
+TB_ADDSTRINGW     0x044d
+TB_AUTOSIZE     0x0421
+TB_BUTTONCOUNT     0x0418
+TB_BUTTONSTRUCTSIZE     0x041e
+TB_CHANGEBITMAP     0x042b
+TB_CHECKBUTTON     0x0402
+TB_COMMANDTOINDEX     0x0419
+TB_CUSTOMIZE     0x041b
+TB_DELETEBUTTON     0x0416
+TB_ENABLEBUTTON     0x0401
+TB_GETANCHORHIGHLIGHT     0x044a
+TB_GETBITMAP     0x042c
+TB_GETBITMAPFLAGS     0x0429
+TB_GETBUTTON     0x0417
+TB_GETBUTTONINFOA     0x0441
+TB_GETBUTTONINFOW     0x043f
+TB_GETBUTTONSIZE     0x043a
+TB_GETBUTTONTEXTA     0x042d
+TB_GETBUTTONTEXTW     0x044b
+TB_GETDISABLEDIMAGELIST     0x0437
+TB_GETEXTENDEDSTYLE     0x0455
+TB_GETHOTIMAGELIST     0x0435
+TB_GETHOTITEM     0x0447
+TB_GETIMAGELIST     0x0431
+TB_GETINSERTMARK     0x044f
+TB_GETINSERTMARKCOLOR     0x0459
+TB_GETITEMRECT     0x041d
+TB_GETMAXSIZE     0x0453
+TB_GETOBJECT     0x043e
+TB_GETPADDING     0x0456
+TB_GETRECT     0x0433
+TB_GETROWS     0x0428
+TB_GETSTATE     0x0412
+TB_GETSTRINGA     0x045c
+TB_GETSTRINGW     0x045b
+TB_GETSTYLE     0x0439
+TB_GETTEXTROWS     0x043d
+TB_GETTOOLTIPS     0x0423
+TB_HIDEBUTTON     0x0404
+TB_HITTEST     0x0445
+TB_INDETERMINATE     0x0405
+TB_INSERTBUTTONA     0x0415
+TB_INSERTBUTTONW     0x0443
+TB_INSERTMARKHITTEST     0x0451
+TB_ISBUTTONCHECKED     0x040a
+TB_ISBUTTONENABLED     0x0409
+TB_ISBUTTONHIDDEN     0x040c
+TB_ISBUTTONHIGHLIGHTED     0x040e
+TB_ISBUTTONINDETERMINATE     0x040d
+TB_ISBUTTONPRESSED     0x040b
+TB_LOADIMAGES     0x0432
+TB_MAPACCELERATORA     0x044e
+TB_MAPACCELERATORW     0x045a
+TB_MARKBUTTON     0x0406
+TB_MOVEBUTTON     0x0452
+TB_PRESSBUTTON     0x0403
+TB_REPLACEBITMAP     0x042e
+TB_SAVERESTOREA     0x041a
+TB_SAVERESTOREW     0x044c
+TB_SETANCHORHIGHLIGHT     0x0449
+TB_SETBITMAPSIZE     0x0420
+TB_SETBUTTONINFOA     0x0442
+TB_SETBUTTONINFOW     0x0440
+TB_SETBUTTONSIZE     0x041f
+TB_SETBUTTONWIDTH     0x043b
+TB_SETCMDID     0x042a
+TB_SETDISABLEDIMAGELIST     0x0436
+TB_SETDRAWTEXTFLAGS     0x0446
+TB_SETEXTENDEDSTYLE     0x0454
+TB_SETHOTIMAGELIST     0x0434
+TB_SETHOTITEM     0x0448
+TB_SETIMAGELIST     0x0430
+TB_SETINDENT     0x042f
+TB_SETINSERTMARK     0x0450
+TB_SETINSERTMARKCOLOR     0x0458
+TB_SETMAXTEXTROWS     0x043c
+TB_SETPADDING     0x0457
+TB_SETPARENT     0x0425
+TB_SETROWS     0x0427
+TB_SETSTATE     0x0411
+TB_SETSTYLE     0x0438
+TB_SETTOOLTIPS     0x0424
+TBM_CLEARSEL     0x0413
+TBM_CLEARTICS     0x0409
+TBM_GETBUDDY     0x0421
+TBM_GETCHANNELRECT     0x041a
+TBM_GETLINESIZE     0x0418
+TBM_GETNUMTICS     0x0410
+TBM_GETPAGESIZE     0x0416
+TBM_GETPOS     0x0400
+TBM_GETPTICS     0x040e
+TBM_GETRANGEMAX     0x0402
+TBM_GETRANGEMIN     0x0401
+TBM_GETSELEND     0x0412
+TBM_GETSELSTART     0x0411
+TBM_GETTHUMBLENGTH     0x041c
+TBM_GETTHUMBRECT     0x0419
+TBM_GETTIC     0x0403
+TBM_GETTICPOS     0x040f
+TBM_GETTOOLTIPS     0x041e
+TBM_SETBUDDY     0x0420
+TBM_SETLINESIZE     0x0417
+TBM_SETPAGESIZE     0x0415
+TBM_SETPOS     0x0405
+TBM_SETRANGE     0x0406
+TBM_SETRANGEMAX     0x0408
+TBM_SETRANGEMIN     0x0407
+TBM_SETSEL     0x040a
+TBM_SETSELEND     0x040c
+TBM_SETSELSTART     0x040b
+TBM_SETTHUMBLENGTH     0x041b
+TBM_SETTIC     0x0404
+TBM_SETTICFREQ     0x0414
+TBM_SETTIPSIDE     0x041f
+TBM_SETTOOLTIPS     0x041d
+TTM_ACTIVATE     0x0401
+TTM_ADDTOOLA     0x0404
+TTM_ADDTOOLW     0x0432
+TTM_ADJUSTRECT     0x041f
+TTM_DELTOOLA     0x0405
+TTM_DELTOOLW     0x0433
+TTM_ENUMTOOLSA     0x040e
+TTM_ENUMTOOLSW     0x043a
+TTM_GETBUBBLESIZE     0x041e
+TTM_GETCURRENTTOOLA     0x040f
+TTM_GETCURRENTTOOLW     0x043b
+TTM_GETDELAYTIME     0x0415
+TTM_GETMARGIN     0x041b
+TTM_GETMAXTIPWIDTH     0x0419
+TTM_GETTEXTA     0x040b
+TTM_GETTEXTW     0x0438
+TTM_GETTIPBKCOLOR     0x0416
+TTM_GETTIPTEXTCOLOR     0x0417
+TTM_GETTOOLCOUNT     0x040d
+TTM_GETTOOLINFOA     0x0408
+TTM_GETTOOLINFOW     0x0435
+TTM_HITTESTA     0x040a
+TTM_HITTESTW     0x0437
+TTM_NEWTOOLRECTA     0x0406
+TTM_NEWTOOLRECTW     0x0434
+TTM_POP     0x041c
+TTM_RELAYEVENT     0x0407
+TTM_SETDELAYTIME     0x0403
+TTM_SETMARGIN     0x041a
+TTM_SETMAXTIPWIDTH     0x0418
+TTM_SETTIPBKCOLOR     0x0413
+TTM_SETTIPTEXTCOLOR     0x0414
+TTM_SETTITLEA     0x0420
+TTM_SETTITLEW     0x0421
+TTM_SETTOOLINFOA     0x0409
+TTM_SETTOOLINFOW     0x0436
+TTM_TRACKACTIVATE     0x0411
+TTM_TRACKPOSITION     0x0412
+TTM_UPDATE     0x041d
+TTM_UPDATETIPTEXTA     0x040c
+TTM_UPDATETIPTEXTW     0x0439
+TTM_WINDOWFROMPOINT     0x0410
+UDM_GETACCEL     0x046c
+UDM_GETBASE     0x046e
+UDM_GETBUDDY     0x046a
+UDM_GETPOS     0x0468
+UDM_GETPOS32     0x0472
+UDM_GETRANGE     0x0466
+UDM_GETRANGE32     0x0470
+UDM_SETACCEL     0x046b
+UDM_SETBASE     0x046d
+UDM_SETBUDDY     0x0469
+UDM_SETPOS     0x0467
+UDM_SETPOS32     0x0471
+UDM_SETRANGE     0x0465
+UDM_SETRANGE32     0x046f
+UM_GETCURFOCUSA     0x07ed
+UM_GETCURFOCUSW     0x07ee
+UM_GETGROUPSELA     0x07eb
+UM_GETGROUPSELW     0x07ec
+UM_GETOPTIONS     0x07ef
+UM_GETOPTIONS2     0x07f0
+UM_GETSELCOUNT     0x07e8
+UM_GETUSERSELA     0x07e9
+UM_GETUSERSELW     0x07ea
+WIZ_NEXT     0x040b
+WIZ_PREV     0x040c
+WIZ_QUERYNUMPAGES     0x040a
+WLX_WM_SAS     0x0659
